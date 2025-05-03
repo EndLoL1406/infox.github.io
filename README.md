@@ -1,6 +1,6 @@
 # Site da Empresa
 
-Este repositório contém o código-fonte para o site que estou desenvolvendo para a empresa onde trabalho. O objetivo do projeto é criar uma plataforma intuitiva e funcional que atenda às necessidades dos usuários e fortaleça a presença online da empresa.
+Este repositório contém o código-fonte para o site que estou desenvolvendo juntamente com a Mariane para a empresa onde trabalho. O objetivo do projeto é criar uma plataforma intuitiva e funcional que atenda às necessidades dos usuários e fortaleça a presença online da empresa.
 
 ## Funcionalidades
 
