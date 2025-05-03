@@ -1,0 +1,325 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(45deg, #1a1a2e, #0e0e1a, #1c1c2e);
+  background-size: 600% 600%;
+  animation: gradientBackground 10s ease infinite;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* Container centralizado */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #1b0f26;
+  padding: 20px 0;
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 90px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 40px;
+}
+
+nav ul li a {
+  color: #00cfff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Banner inicial */
+.banner {
+  background: linear-gradient(90deg, #00cfff55, #1a1a2eaa);
+  color: #ffffff;
+  text-align: center;
+  padding: 60px 20px;
+  border-bottom: 2px solid #00cfff;
+}
+
+.banner h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.banner p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.sobre-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+/* Em telas maiores, lado a lado */
+@media (min-width: 768px) {
+  .sobre-flex {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .carousel {
+    width: 50%;
+  }
+
+  .texto-sobre {
+    width: 45%;
+  }
+}
+
+.galeria-escola {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.galeria-escola img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+}
+
+
+/* Seções */
+.section {
+  padding: 60px 0;
+  background-color: #0e021a;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* Cursos */
+.cursos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.curso {
+  background-color: #1c1c2e;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.curso:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(10, 226, 255, 0.747);
+}
+
+.curso-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Formulário */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: auto;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+form button {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #00cfff;
+  color: #0e0e1a;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #00cfff;
+}
+
+/* Rodapé */
+footer {
+  background-color: #1c1c2e;
+  color: #8888ff;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+/* Rodapé com colunas */
+.footer-info {
+  background-color: #1c1c2e;
+  color: #ffffff;
+  padding: 40px 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.footer-col h3 {
+  margin-bottom: 15px;
+  color: #00cfff;
+  font-size: 18px;
+}
+
+.footer-col p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.footer-col p:hover {
+  text-decoration: underline;
+  color: #00cfff;
+}
+
+/* Animação de fundo (opcional) */
+@keyframes gradientBackground {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.footer-col a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.footer-col a:hover {
+  text-decoration: underline;
+  color: #00cfff;
+}
+
+.carousel {
+  position: relative;
+  max-width: 600px;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel img {
+  width: 100%;
+  max-height: 400px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 207, 255, 0.3);
+  object-fit: cover;
+}
+
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.4);
+  border: none;
+  color: #ffffff;
+  font-size: 30px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 2;
+  transition: background-color 0.3s ease;
+}
+
+.carousel button:hover {
+  background-color: rgba(0, 207, 255, 0.7);
+}
+
+.carousel .prev {
+  left: 10px;
+}
+
+.carousel .next {
+  right: 10px;
+}
+
+.logo-stats {
+  width: 120px;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+.stats {
+  background: linear-gradient(45deg, #1a1a2e, #0e0e1a);
+  color: #00cfff;
+  text-align: center;
+}
+
+.stats-grid {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.stat {
+  background-color: #1c1c2e;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 207, 255, 0.2);
+  transition: transform 0.3s ease;
+  min-width: 220px;
+}
+
+.stat:hover {
+  transform: scale(1.05);
+}
+
+.stat-num {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 10px;
+}

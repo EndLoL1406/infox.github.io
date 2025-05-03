@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MicroLavras</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container header-flex">
+      <img src="imagens/logomicro.jpg" alt="Logo MicroLavras" class="logo" />
+      <nav>
+        <ul>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#cursos">Cursos</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="banner">
+    <div class="container">
+      <h2>Bem-vindo à MicroLavras</h2>
+      <p>Transformando conhecimento em oportunidades!</p>
+    </div>
+  </section>
+
+  <section id="sobre" class="section">
+    <div class="container sobre-flex">
+      <div class="carousel">
+        <button class="prev">&#10094;</button>
+        <img src="imagens/escola1.jpg" alt="Imagem da escola" id="carousel-img">
+        <button class="next">&#10095;</button>
+      </div>
+      <div class="texto-sobre">
+        <h2>Quem somos?</h2>
+        <p>Somos uma escola especializada em tecnologia, comprometida em preparar nossos alunos para o mercado de trabalho moderno e conectado. Oferecemos uma formação prática e atualizada, com foco nas áreas mais procuradas da atualidade.</p>
+      </div>
+    </div>
+  </section>
+  
+
+  <section id="cursos" class="section">
+    <div class="container">
+      <h2>Nossos Cursos</h2>
+      <div class="cursos-grid">
+        <div class="curso">
+          <img src="imagens/informatica.jpg" alt="Curso de Informatica Profissionalizante " class="curso-img" />
+          <h2>Curso de Informática Profissionalizante</h2>
+          <h4>Carga horária: 56 horas</h4>
+          <p>Aprenda do inicio, curso ideal para quem nunca mexeu com computador antes e quer entrar no mercado de trabalho. Pacote Office e Libre office, Windows, Linux e muitos mais.</p>
+        </div>
+        <div class="curso">
+          <img src="imagens/manutenção.jpg" alt="Curso de manutenção de celulares " class="curso-img" />
+          <h2>Curso de Manutenção de celulares</h2>
+          <h4>Carga horária: 72 horas</h4>
+          <p>Aprenda a diagnosticar e consertar smartphones com aulas práticas e orientação profissional.</p>
+        </div>
+        <div class="curso">
+          <img src="imagens/ingles.jpg" alt="Curso de ingles " class="curso-img" />
+          <h2>Curso de Inglês (niveis A1 e A2)</h2>
+          <h4>Carga Horaria: 56 horas</h4>
+          <p>Curso ideal para quem está começando a aprender inglês, com foco em vocabulário, escuta e conversação do dia a dia.</p>
+        </div>
+        <div class="curso">
+          <img src="imagens/office.jpg" alt="Curso de pacote office " class="curso-img" />
+          <h2>Curso de Pacote Office</h2>
+          <h4>Carga Horaria: 32 horas</h4>
+          <p>Aprenda a utilizar ferramentas como Word, Excel e PowerPoint de forma eficiente, com foco no uso profissional e acadêmico.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="estatisticas" class="section stats">
+    <div class="container">
+      <img src="imagens/logomicro.jpg" alt="Logo MicroLavras" class="logo-stats" />
+      <h2>Nossos Números</h2>
+      <div class="stats-grid">
+        <div class="stat">
+          <h3 class="stat-num" data-num="120">0</h3>
+          <p>Alunos Ativos</p>
+        </div>
+        <div class="stat">
+          <h3 class="stat-num" data-num="10000">0</h3>
+          <p>Alunos Formados</p>
+        </div>
+      </div>
+    </div>
+  </section>    
+
+  <section id="contato" class="section">
+    <div class="container">
+      <h2>Fale Conosco</h2>
+      <form id="form-contato">
+        <input type="text" placeholder="Seu nome" required />
+        <input type="email" placeholder="Seu e-mail" required />
+        <textarea placeholder="Sua mensagem" required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="footer-info">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h3>Contatos</h3>
+        <p>Financeiro: (35)99251-0028</p>
+        <p>Coordenação: (35)98712-5739</p>
+        <p>Vendas: (35) 99748-5349</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Redes Sociais</h3>
+        <p><a href="https://www.facebook.com/profile.php?id=61575628963487&mibextid=wwXIfr&mibextid=wwXIfr" target="_blank">Facebook</a></p>
+        <p><a href="https://www.instagram.com/microlavras2025" target="_blank">Instagram</a></p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Links Úteis</h3>
+        <p>Política de Privacidade</p>
+        <p>Parceiros</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 MicroLavras. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
