@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -40,6 +41,27 @@
       </div>
     </div>
   </section>
+
+  <section class="cards-section">
+    <div class="cards-container">
+  
+      <div class="card">
+        <h3>Material exclusivo</h3>
+        <p>Desenvolvido por profissionais da área, com foco no que o mercado realmente exige.</p>
+      </div>
+  
+      <div class="card">
+        <h3>Aulas 100% presencias</h3>
+        <p>Porque acreditamos que nada substitui a prática e o contato direto com o professor.</p>
+      </div>
+  
+      <div class="card">
+        <h3>Suporte total ao aluno</h3>
+        <p>Aqui, você nunca está sozinho. Nossa equipe acompanha de perto sua evolução e está sempre disponível para te ajudar.</p>
+      </div>
+  
+    </div>
+  </section>  
   
 
   <section id="cursos" class="section">
@@ -76,20 +98,22 @@
 
   <section id="estatisticas" class="section stats">
     <div class="container">
-      <img src="imagens/logomicro.jpg" alt="Logo MicroLavras" class="logo-stats" />
       <h2>Nossos Números</h2>
-      <div class="stats-grid">
-        <div class="stat">
-          <h3 class="stat-num" data-num="120">0</h3>
-          <p>Alunos Ativos</p>
-        </div>
-        <div class="stat">
-          <h3 class="stat-num" data-num="10000">0</h3>
-          <p>Alunos Formados</p>
+      <div class="logo-numeros-container">
+        <img src="imagens/logomicro.jpg" alt="Logo MicroLavras" class="logo-stats" />
+        <div class="stats-grid">
+          <div class="stat">
+            <h3 class="stat-num" data-num="120">0</h3>
+            <p>Alunos Ativos</p>
+          </div>
+          <div class="stat">
+            <h3 class="stat-num" data-num="10000">0</h3>
+            <p>Alunos Formados</p>
+          </div>
         </div>
       </div>
     </div>
-  </section>    
+  </section>     
 
   <section id="contato" class="section">
     <div class="container">
@@ -134,4 +158,33 @@
 
   <script src="script.js"></script>
 </body>
+<div id="particles-js"></div>
+
+
+<script>
+  particlesJS("particles-js", {
+    particles: {
+      number: { value: 80 },
+      color: { value: "#00ffff" },
+      shape: { type: "circle" },
+      opacity: { value: 0.5 },
+      size: { value: 3 },
+      line_linked: {
+        enable: true,
+        distance: 150,
+        color: "#00ffff",
+        opacity: 0.4,
+        width: 1
+      },
+      move: { enable: true, speed: 2 }
+    },
+    interactivity: {
+      events: {
+        onhover: { enable: true, mode: "repulse" },
+        onclick: { enable: true, mode: "push" }
+      }
+    }
+  });
+</script>
+
 </html>
