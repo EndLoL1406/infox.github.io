@@ -1,10 +1,22 @@
 /* Reset básico */
+
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* atrás de tudo */
+  background: #0d0c23; /* cor de fundo escura */
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Estilo geral do body */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(45deg, #1a1a2e, #0e0e1a, #1c1c2e);
@@ -37,6 +49,7 @@ header {
   height: 90px;
 }
 
+/* Navegação */
 nav ul {
   display: flex;
   justify-content: center;
@@ -55,7 +68,7 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
-/* Banner inicial */
+/* Banner */
 .banner {
   background: linear-gradient(90deg, #00cfff55, #1a1a2eaa);
   color: #ffffff;
@@ -74,6 +87,7 @@ nav ul li a:hover {
   color: #ccc;
 }
 
+/* Seção Sobre */
 .sobre-flex {
   display: flex;
   flex-direction: column;
@@ -81,7 +95,7 @@ nav ul li a:hover {
   gap: 30px;
 }
 
-/* Em telas maiores, lado a lado */
+/* Layout responsivo */
 @media (min-width: 768px) {
   .sobre-flex {
     flex-direction: row;
@@ -98,6 +112,7 @@ nav ul li a:hover {
   }
 }
 
+/* Galeria */
 .galeria-escola {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -113,8 +128,7 @@ nav ul li a:hover {
   object-fit: cover;
 }
 
-
-/* Seções */
+/* Seções padrão */
 .section {
   padding: 60px 0;
   background-color: #0e021a;
@@ -194,13 +208,15 @@ footer {
 .footer-info {
   background-color: #1c1c2e;
   color: #ffffff;
-  padding: 40px 0;
+  padding: 40px 20px;
 }
 
 .footer-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 30px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .footer-col h3 {
@@ -210,36 +226,30 @@ footer {
 }
 
 .footer-col p {
-  margin-bottom: 10px;
   font-size: 14px;
-  cursor: pointer;
+  margin-bottom: 10px;
+  line-height: 1.5;
 }
 
-.footer-col p:hover {
-  text-decoration: underline;
+.footer-col a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer-col a:hover {
   color: #00cfff;
+  text-decoration: underline;
 }
 
-/* Animação de fundo (opcional) */
+
+/* Animação de fundo */
 @keyframes gradientBackground {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-.footer-col a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 14px;
-  display: inline-block;
-  margin-bottom: 10px;
-}
-
-.footer-col a:hover {
-  text-decoration: underline;
-  color: #00cfff;
-}
-
+/* Carrossel */
 .carousel {
   position: relative;
   max-width: 600px;
@@ -284,22 +294,35 @@ footer {
   right: 10px;
 }
 
+/* Estatísticas */
+.logo-numeros-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
 .logo-stats {
-  width: 120px;
-  margin: 0 auto 20px;
+  width: 400px;
+  height: auto;
+  border-radius: 10px;
   display: block;
+  margin: auto;
 }
 
 .stats {
-  background: linear-gradient(45deg, #1a1a2e, #0e0e1a);
+  background: linear-gradient(45deg, #1b0f26, #1b0f26);
   color: #00cfff;
   text-align: center;
 }
 
 .stats-grid {
   display: flex;
+  flex-direction: column;
+  gap: 20px;
   justify-content: center;
-  gap: 60px;
   flex-wrap: wrap;
   margin-top: 30px;
 }
@@ -322,4 +345,54 @@ footer {
   font-weight: bold;
   color: #ffffff;
   margin-bottom: 10px;
+}
+
+.cards-section {
+  background-color: #1b0f26; /* fundo escuro ou personalizado */
+  padding: 60px 20px;
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-size: 20px;
+  color: #7c3aed; /* roxo moderno */
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #333;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+a.curso {
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
