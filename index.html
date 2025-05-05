@@ -116,20 +116,17 @@
    </section>     
  
    <section id="contato" class="section">
-     <div class="container">
-       <h2>Fale Conosco</h2>
-       <form id="form-contato">
-         <input type="text" placeholder="Seu nome" required />
-         <input type="email" placeholder="Seu e-mail" required />
-         <textarea placeholder="Sua mensagem" required></textarea>
-       <form action="https://formsubmit.co/orientacaomicrolavras@gmail.com" method="POST">
-         <input type="text" name="nome" placeholder="Seu nome" required />
-         <input type="email" name="email" placeholder="Seu e-mail" required />
-         <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
-         <button type="submit">Enviar</button>
-       </form>
-     </div>
-   </section>
+  <div class="container">
+    <h2>Fale Conosco</h2>
+    <form id="form-contato" action="https://formsubmit.co/orientacaomicrolavras@gmail.com" method="POST">
+      <input type="text" name="nome" placeholder="Seu nome" required />
+      <input type="email" name="email" placeholder="Seu e-mail" required />
+      <input type="tel" name="telefone" placeholder="Seu telefone" pattern="^\(?\d{2}\)?[\s-]?\d{4,5}-?\d{4}$" required />
+      <textarea name="mensagem" placeholder="Qual curso você escolheu?" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+</section>
  
    <section class="footer-info">
      <div class="container footer-grid">
