@@ -1,8 +1,4 @@
-document.getElementById('form-contato').addEventListener('submit', function(e) {
-  e.preventDefault();
-  alert('Mensagem enviada com sucesso!');
-  this.reset();
-});
+
 const imagens = [
   "imagens/escola1.jpg",
   "imagens/escola2.jpg",
@@ -43,3 +39,30 @@ document.addEventListener("DOMContentLoaded", () => {
     updateCount();
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("form-contato");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(this);
+
+    fetch(this.action, {
+      method: "POST",
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        alert("Mensagem enviada com sucesso!");
+        this.reset();
+      } else {
+        alert("Erro ao enviar. Tente novamente mais tarde.");
+      }
+    }).catch(error => {
+      alert("Erro de conexão. Verifique sua internet e tente novamente.");
+    });
+  });
+});
+
